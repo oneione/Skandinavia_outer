@@ -2,6 +2,34 @@
 @import 'project_style';
 /* footer styles */
 
+.footer{
+  .border-box;
+  padding: 12em/@bfz 0;
+  text-align: right;
+}
 
+.developed-by{
+  .arial(12em/@bfz,1);
+  a{
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+
+//dependencies:
+
+//sticky footer:
+.footer, .push{
+  height: 36em/@bfz;
+}
+.main-wrap{
+  min-height: 100%;
+  margin-bottom:-36em/@bfz;
+}
+
+//end dependencies
 
 /* end footer styles */

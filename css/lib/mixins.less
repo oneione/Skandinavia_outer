@@ -70,4 +70,58 @@
 .sprite (@x, @y) {
   background: url('../img/sprite.png') no-repeat -@x -@y;
 }
+
+.text-input{
+  border:0;
+  background: none;
+  outline:0;
+  .border-radius(0);
+  .border-box;
+  .inline-block;
+}
+.button{
+  &:extend(.text-input);
+}
+
+.placeholder(@color:inherit){
+  &::-webkit-input-placeholder{
+    .text;
+    color:@color;
+  }
+  &::-moz-placeholder{
+    .text;
+    line-height: normal;
+    color:@color;
+  }
+  &:-moz-placeholder{
+    .text;
+    color:@color;
+  }
+  &:-ms-input-placeholder{
+    .text;
+    color:@color;
+  }
+}
+
+.justify(){
+  text-align: justify;
+  >*{
+    .inline-block;
+    text-align: left;
+  }
+  &:after{
+    content: '';
+    .inline-block;
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+.bg-cover{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 /* end common mixins */

@@ -22,27 +22,216 @@
   zoom: 1;
   *display: inline;
 }
+.text-input,
+.button {
+  border: 0;
+  background: none;
+  outline: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+}
+.bg-cover {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 /* end common mixins */
 /* base project styles */
 @font-face {
-  font-family: 'dincondensedc';
-  src: url('../fonts/dincondensedc-webfont.eot');
-  src: url('../fonts/dincondensedc-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dincondensedc-webfont.woff') format('woff'), url('../fonts/dincondensedc-webfont.woff2') format('woff2'), url('../fonts/dincondensedc-webfont.ttf') format('truetype');
+  font-family: 'helveticaneuecyr-thin';
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-.min-width {
-  min-width: 1000px;
+@font-face {
+  font-family: 'helveticaneuecyr-light';
+  src: url('../fonts/helveticaneuecyr-light-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-light-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'helveticaneuecyr-bold';
+  src: url('../fonts/helveticaneuecyr-bold-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  overflow-x: hidden;
 }
 body {
   width: 100%;
   height: 100%;
-  min-width: 1000px;
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: normal;
 }
+/**** body media (font-size correction) ****/
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  
+}
+/**** end Ipad ****/
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  
+}
+/*** end Iphone ***/
+/**** end body media (font-size correction) ****/
 .wrap {
-  width: 1000px;
   margin: 0 auto;
+  padding: 0 3.2142857142857144em;
+}
+.main-wrap {
+  width: 100%;
+  -webkit-transition: margin-left 0.2s ease;
+  -moz-transition: margin-left 0.2s ease;
+  -ms-transition: margin-left 0.2s ease;
+  -o-transition: margin-left 0.2s ease;
+  transition: margin-left 0.2s ease;
+}
+@media only screen and (max-width: 1024px) {
+  .main-wrap {
+    position: relative;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 /* end base project styles */
 /* main page styles */
+.main-page__content {
+  position: absolute;
+  top: 14.714285714285714em;
+  bottom: 2.5714285714285716em;
+  left: 0;
+  width: 100%;
+  word-spacing: -0.34em;
+}
+.main-page__content > * {
+  word-spacing: normal;
+}
+.object {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  width: 33.333%;
+  height: 50%;
+  min-height: 12.857142857142858em;
+}
+.object-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 3.642857142857143em;
+  transition: height 0.2s, top 0.2s;
+}
+.object-wrap:hover {
+  z-index: 1;
+  height: 120%;
+  top: -10%;
+}
+.object-picture {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.object-subscription {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 3.642857142857143em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.7142857142857143em 1.4285714285714286em 0.5714285714285714em;
+  color: #ffffff;
+}
+.object-subscription .object-title {
+  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
+  font-size: 1.35em;
+  line-height: 1;
+  margin-bottom: 0.09090909090909091em;
+}
+.object-subscription .object-title .object-name {
+  font-weight: normal;
+  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1;
+}
+.object-subscription .object-city {
+  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
+  font-size: 0.8571428571428571em;
+  line-height: 1;
+}
+.object-subscription.black-subscription {
+  color: #000000;
+}
+/********** main page media **********/
+/**** big screen ****/
+@media only screen and (min-width: 1600px) {
+  .object {
+    width: 25%;
+  }
+}
+/**** end big screen ****/
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  .main-page__content {
+    top: 10.428571428571429em;
+    word-spacing: -0.29em;
+  }
+  .object {
+    width: 50%;
+  }
+}
+/**** end Ipad ****/
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  .main-page__content {
+    top: 8.714285714285714em;
+  }
+  .object {
+    width: 100%;
+  }
+}
+/*** end Iphone ***/
+/********** end main page media **********/
 /* main page styles */

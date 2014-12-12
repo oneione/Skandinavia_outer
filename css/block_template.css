@@ -22,26 +22,106 @@
   zoom: 1;
   *display: inline;
 }
+.text-input,
+.button {
+  border: 0;
+  background: none;
+  outline: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+}
+.bg-cover {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
 /* end common mixins */
 /* base project styles */
 @font-face {
-  font-family: 'dincondensedc';
-  src: url('../fonts/dincondensedc-webfont.eot');
-  src: url('../fonts/dincondensedc-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dincondensedc-webfont.woff') format('woff'), url('../fonts/dincondensedc-webfont.woff2') format('woff2'), url('../fonts/dincondensedc-webfont.ttf') format('truetype');
+  font-family: 'helveticaneuecyr-thin';
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-.min-width {
-  min-width: 1000px;
+@font-face {
+  font-family: 'helveticaneuecyr-light';
+  src: url('../fonts/helveticaneuecyr-light-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-light-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'helveticaneuecyr-bold';
+  src: url('../fonts/helveticaneuecyr-bold-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff'), url('../fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  overflow-x: hidden;
 }
 body {
   width: 100%;
   height: 100%;
-  min-width: 1000px;
+  font-family: 'Arial';
+  font-size: 14px;
+  line-height: normal;
 }
+/**** body media (font-size correction) ****/
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  
+}
+/**** end Ipad ****/
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  
+}
+/*** end Iphone ***/
+/**** end body media (font-size correction) ****/
 .wrap {
-  width: 1000px;
   margin: 0 auto;
+  padding: 0 3.2142857142857144em;
+}
+.main-wrap {
+  width: 100%;
+  -webkit-transition: margin-left 0.2s ease;
+  -moz-transition: margin-left 0.2s ease;
+  -ms-transition: margin-left 0.2s ease;
+  -o-transition: margin-left 0.2s ease;
+  transition: margin-left 0.2s ease;
+}
+@media only screen and (max-width: 1024px) {
+  .main-wrap {
+    position: relative;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 /* end base project styles */
 /* page styles */

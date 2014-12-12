@@ -1,7 +1,13 @@
+@import 'lib/mixins';
 /* base project styles */
 
 //color scheme:
-@green:#589720;
+@header-black: #060606;
+
+//fonts colors:
+@black: #000;
+@white: #fff;
+//end fonts colors
 
 //end color scheme
 
@@ -9,12 +15,31 @@
 
 //font-face example:
 @font-face {
-  font-family: 'dincondensedc';
-  src: url('../fonts/dincondensedc-webfont.eot');
-  src: url('../fonts/dincondensedc-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/dincondensedc-webfont.woff') format('woff'),
-  url('../fonts/dincondensedc-webfont.woff2') format('woff2'),
-  url('../fonts/dincondensedc-webfont.ttf') format('truetype');
+  font-family: 'helveticaneuecyr-thin';
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'),
+  url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'helveticaneuecyr-light';
+  src: url('../fonts/helveticaneuecyr-light-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff'),
+  url('../fonts/helveticaneuecyr-light-webfont.woff2') format('woff2'),
+  url('../fonts/helveticaneuecyr-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'helveticaneuecyr-bold';
+  src: url('../fonts/helveticaneuecyr-bold-webfont.eot');
+  src: url('../fonts/helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff'),
+  url('../fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'),
+  url('../fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,25 +49,83 @@
 .tnr(@font-size: inherit, @line-height: inherit){font-family: "Times New Roman", Times, serif;  font-size:@font-size; line-height:@line-height; }
 .tahoma(@font-size: inherit, @line-height: inherit){font-family: 'Tahoma'; font-size:@font-size; line-height:@line-height; }
 .verdana(@font-size: inherit, @line-height: inherit){font-family: 'Verdana'; font-size:@font-size; line-height:@line-height; }
-.arial(@font-size: inherit, @line-height: inherit){font-family: 'Arial'; font-size:@font-size; line-height:@line-height; }
 
-.din-cond(@font-size: inherit, @line-height: inherit){font-family: 'dincondensedc', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
+.arial(@font-size: inherit, @line-height: inherit){font-family: 'Arial'; font-size:@font-size; line-height:@line-height; }
+.helvetica-thin(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-thin', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
+.helvetica-light(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
+.helvetica-bold(@font-size: inherit, @line-height: inherit){font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif; font-size:@font-size; line-height:@line-height; }
 //end fonts
 
 //layout settings:
-.min-width{min-width: 1000px;}
+@bfz: 14px;
+@wrap-padding: 45em/@bfz;
+
+@touch-menu-width:180em/@bfz;
+
+html{
+  overflow-x: hidden;
+}
 
 body{
   width:100%;
   height:100%;
-  .min-width;
+
+  .arial(@bfz,normal);
 }
 
+/**** body media (font-size correction) ****/
+
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  body{
+//    font-size: 12px;
+  }
+}
+/**** end Ipad ****/
+
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  body{
+//    font-size: 10px;
+  }
+}
+/*** end Iphone ***/
+
+/**** end body media (font-size correction) ****/
+
 .wrap{
-  width:1000px;
   margin:0 auto;
+  padding: 0 @wrap-padding;
+}
+
+.main-wrap{
+  width: 100%;
+  .transition(margin-left);
+}
+@media only screen and (max-width: 1024px) {
+  .main-wrap{
+    position: relative;
+  }
 }
 //end layout settings
+
+
+//common blocks:
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+b,strong{
+//  font-weight: normal;
+//  font-family: 'helveticaneuecyr-bold', 'Arial', sans-serif, serif;
+}
+
+a{
+  text-decoration: none;
+  .transition(color);
+}
+
+//end common blocks
 
 
 /* end base project styles */

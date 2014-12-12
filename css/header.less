@@ -2,6 +2,253 @@
 @import 'project_style';
 /* header styles */
 
+.header{
 
+}
+
+.header__top-wrap{
+  .clearfix;
+  padding: 10em/@bfz 0;
+  background: @header-black;
+  word-spacing: -0.34em;
+
+  .wrap>*{
+    word-spacing: normal;
+  }
+}
+.header__logo{
+  .border-box;
+  .inline-block;
+
+  width: 21%;
+  padding: 28em/@bfz 20em/@bfz 32em/@bfz 0;
+
+  img{
+    max-width: 100%;
+  }
+}
+
+.header__contacts{
+  .border-box;
+  .inline-block;
+
+  width: 79%;
+  padding-left: 20em/@bfz;
+  margin-bottom: -10em/@bfz;
+
+  text-align: right;
+
+  >li{
+    .inline-block;
+    margin-bottom: 10em/@bfz;
+    color:@white;
+    margin-left: 25em/@bfz;
+
+    .city{
+      .arial(1em,1);
+      font-weight: bold;
+    }
+    .tel{
+      .helvetica-light(1em,1);
+    }
+  }
+}
+
+
+/*********** main menu ***********/
+
+.header__menu-wrap{
+  padding-top: 30em/@bfz;
+  padding-bottom: 45em/@bfz;
+  .clearfix;
+}
+.main-menu{
+  position: relative;
+
+  ul{
+    li{
+      .inline-block;
+      margin-right: 24em/@bfz;
+      a{
+        display: block;
+      }
+    }
+  }
+}
+
+.main-menu__first-level{
+  >li{
+    >a{
+      padding: 5em/@bfz 0;
+      border-bottom: 4px solid transparent;
+
+      .arial(1em,1);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &.active{
+      >a{
+        border-color: @black;
+      }
+      .main-menu__second-level{
+        display: block;
+      }
+    }
+  }
+}
+
+.main-menu__second-level{
+  display: none;
+  position: absolute;
+  top:34em/@bfz;
+  left: 0;
+
+  >li{
+    >a{
+      padding: 5em/12 0;
+      .helvetica-thin(12em/@bfz,1);
+    }
+
+    &:hover, &.active{
+      >a{
+        .helvetica-bold(12em/@bfz,1);
+      }
+    }
+  }
+}
+
+.touch-menu-control{
+  float:right;
+  padding: 10em/38;
+  margin:-10em/38 -10em/38 0 0;
+  .arial(38em/@bfz,1);
+  color:@black;
+  display: none;
+  transition:all 0.2s;
+}
+
+/*********** end main menu ***********/
+
+
+
+/************* header media **************/
+
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  //bfz @bfz
+  .header__logo{
+    width: 25%;
+    padding: 10em/@bfz 0 12em/@bfz;
+  }
+
+  .header__contacts{
+    width: 75%;
+    >li{
+      display: block;
+    }
+  }
+
+  .header__menu-wrap{
+    padding: 10em/@bfz 0;
+  }
+
+  //touch menu show:
+  .touch-menu-control{
+    display: block;
+  }
+
+  .main-menu{
+    position: absolute;
+    top:0;
+    right:-@touch-menu-width;
+    height: 100%;
+    width: @touch-menu-width;
+    padding: 70em/@bfz 20em/@bfz 40em/@bfz;
+    background: #262626;
+    .border-box;
+
+    color:#a5a5a5;
+
+    ul{
+      li{
+        display: block;
+        margin-right: 0;
+//        margin-bottom: 15em/@bfz;
+        margin-bottom: 0em/@bfz;
+        a{
+          padding: 0;
+          border:0;
+          line-height: 2em;
+          &:hover{
+            color:@white;
+          }
+        }
+      }
+    }
+  }
+
+  .main-menu__first-level{
+    >li{
+//      margin-bottom: 15em/@bfz;
+      &.active{
+        .main-menu__second-level{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .main-menu__second-level{
+    position: static;
+//    padding-top: 15em/@bfz;
+    margin-left: 10em/@bfz;
+
+    >li{
+      &:hover{
+        a{
+          .helvetica-thin(12em/@bfz,2);
+        }
+      }
+    }
+  }
+
+  .open-touch-menu{
+    overflow-y: scroll;
+    .main-wrap{
+      position: fixed;
+      margin-left:-@touch-menu-width;
+    }
+
+    .touch-menu-control{
+      transform:rotate(90deg);
+    }
+
+    .main-menu{
+//      right: 0;
+    }
+  }
+
+  //end touch menu
+
+}
+/**** end Ipad ****/
+
+
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+
+  .header__logo{
+    width: 160em/@bfz;
+  }
+
+  .header__contacts{
+    display: none;
+  }
+
+}
+/*** end Iphone ***/
+
+/************* end header media **************/
 
 /* end header styles */
