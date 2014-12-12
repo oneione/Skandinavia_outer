@@ -1,0 +1,48 @@
+/* common mixins */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.border-box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+}
+/* end common mixins */
+/* base project styles */
+@font-face {
+  font-family: 'dincondensedc';
+  src: url('../fonts/dincondensedc-webfont.eot');
+  src: url('../fonts/dincondensedc-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/dincondensedc-webfont.woff') format('woff'), url('../fonts/dincondensedc-webfont.woff2') format('woff2'), url('../fonts/dincondensedc-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.min-width {
+  min-width: 1000px;
+}
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+}
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+/* end base project styles */
+/* main page styles */
+/* main page styles */
