@@ -93,7 +93,15 @@ body {
 .wrap {
   margin: 0 auto;
   padding: 0 3.2142857142857144em;
+  max-width: 1250px;
 }
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  .wrap {
+    padding: 0 1.4285714285714286em;
+  }
+}
+/*** end Iphone ***/
 .main-wrap {
   width: 100%;
   -webkit-transition: margin-left 0.2s ease;

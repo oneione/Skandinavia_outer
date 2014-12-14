@@ -59,8 +59,9 @@
 //layout settings:
 @bfz: 14px;
 @wrap-padding: 45em/@bfz;
+@max-width: 1250px;
 
-@touch-menu-width:180em/@bfz;
+@touch-menu-width:235em/@bfz;
 
 html{
   overflow-x: hidden;
@@ -96,7 +97,16 @@ body{
 .wrap{
   margin:0 auto;
   padding: 0 @wrap-padding;
+  max-width: @max-width;
 }
+
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  .wrap{
+    padding: 0 20em/@bfz;
+  }
+}
+/*** end Iphone ***/
 
 .main-wrap{
   width: 100%;

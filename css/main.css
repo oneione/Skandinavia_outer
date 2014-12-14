@@ -93,7 +93,15 @@ body {
 .wrap {
   margin: 0 auto;
   padding: 0 3.2142857142857144em;
+  max-width: 1250px;
 }
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  .wrap {
+    padding: 0 1.4285714285714286em;
+  }
+}
+/*** end Iphone ***/
 .main-wrap {
   width: 100%;
   -webkit-transition: margin-left 0.2s ease;
@@ -215,7 +223,7 @@ a {
 /**** Ipad ****/
 @media only screen and (max-width: 1024px) {
   .main-page__content {
-    top: 10.428571428571429em;
+    top: 8.214285714285714em;
     word-spacing: -0.29em;
   }
   .object {
@@ -226,7 +234,7 @@ a {
 /*** Iphone ***/
 @media only screen and (max-width: 480px) {
   .main-page__content {
-    top: 8.714285714285714em;
+    top: 4.642857142857143em;
   }
   .object {
     width: 100%;

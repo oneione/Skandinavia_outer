@@ -123,7 +123,7 @@
   padding: 10em/38;
   margin:-10em/38 -10em/38 0 0;
   .arial(38em/@bfz,1);
-  color:@black;
+  color:@white;
   display: none;
   transition:all 0.2s;
 }
@@ -137,15 +137,41 @@
 /**** Ipad ****/
 @media only screen and (max-width: 1024px) {
   //bfz @bfz
+
+  .header__top-wrap{
+    height: 65em/@bfz;
+    .border-box;
+  }
+
   .header__logo{
-    width: 25%;
-    padding: 10em/@bfz 0 12em/@bfz;
+    width: 160em/@bfz;
+    padding: 0.7em 0 0;
   }
 
   .header__contacts{
-    width: 75%;
+    width: 100%;
+    margin-top: 0.2em;
+    padding: 15em/@bfz 0;
+    background: #fff;
+    white-space: nowrap;
+    text-align: left;
     >li{
-      display: block;
+//      max-width: (100% - 2*3%)/3;
+      max-width: 36%;
+      vertical-align: top;
+      white-space: normal;
+      margin-left: 0;
+//      margin-right: 25em/@bfz;
+      margin-right: 3%;
+      color:@black;
+
+      .tel, .city{
+        white-space: nowrap;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
     }
   }
 
@@ -156,18 +182,21 @@
   //touch menu show:
   .touch-menu-control{
     display: block;
+    margin-top: -0.15em;
   }
 
   .main-menu{
+    //fz: 19px!
     position: absolute;
     top:0;
     right:-@touch-menu-width;
     height: 100%;
     width: @touch-menu-width;
-    padding: 70em/@bfz 20em/@bfz 40em/@bfz;
-    background: #262626;
+    padding: 70em/19 20em/19 40em/19 55em/19;
+    background: @header-black;
     .border-box;
 
+    font-size: 19em/@bfz;
     color:#a5a5a5;
 
     ul{
@@ -234,6 +263,20 @@
 }
 /**** end Ipad ****/
 
+@media only screen and (max-width: 760px) {
+
+  .header__contacts{
+    padding-top: 10em/@bfz;
+    .city{
+      margin-bottom: 3em/@bfz;
+    }
+    .city, .tel{
+      display: block;
+    }
+  }
+
+}
+
 
 /*** Iphone ***/
 @media only screen and (max-width: 480px) {
@@ -244,6 +287,12 @@
 
   .header__contacts{
     display: none;
+  }
+
+  .main-menu{
+    //fz: 14px
+    font-size: 14px;
+    padding: 30em/14 20em/14 40em/14 40em/14;
   }
 
 }

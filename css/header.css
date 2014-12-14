@@ -93,7 +93,15 @@ body {
 .wrap {
   margin: 0 auto;
   padding: 0 3.2142857142857144em;
+  max-width: 1250px;
 }
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  .wrap {
+    padding: 0 1.4285714285714286em;
+  }
+}
+/*** end Iphone ***/
 .main-wrap {
   width: 100%;
   -webkit-transition: margin-left 0.2s ease;
@@ -260,7 +268,7 @@ a {
   font-family: 'Arial';
   font-size: 2.7142857142857144em;
   line-height: 1;
-  color: #000000;
+  color: #ffffff;
   display: none;
   transition: all 0.2s;
 }
@@ -268,33 +276,58 @@ a {
 /************* header media **************/
 /**** Ipad ****/
 @media only screen and (max-width: 1024px) {
+  .header__top-wrap {
+    height: 4.642857142857143em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   .header__logo {
-    width: 25%;
-    padding: 0.7142857142857143em 0 0.8571428571428571em;
+    width: 11.428571428571429em;
+    padding: 0.7em 0 0;
   }
   .header__contacts {
-    width: 75%;
+    width: 100%;
+    margin-top: 0.2em;
+    padding: 1.0714285714285714em 0;
+    background: #fff;
+    white-space: nowrap;
+    text-align: left;
   }
   .header__contacts > li {
-    display: block;
+    max-width: 36%;
+    vertical-align: top;
+    white-space: normal;
+    margin-left: 0;
+    margin-right: 3%;
+    color: #000000;
+  }
+  .header__contacts > li .tel,
+  .header__contacts > li .city {
+    white-space: nowrap;
+  }
+  .header__contacts > li:last-child {
+    margin-right: 0;
   }
   .header__menu-wrap {
     padding: 0.7142857142857143em 0;
   }
   .touch-menu-control {
     display: block;
+    margin-top: -0.15em;
   }
   .main-menu {
     position: absolute;
     top: 0;
-    right: -12.857142857142858em;
+    right: -16.785714285714285em;
     height: 100%;
-    width: 12.857142857142858em;
-    padding: 5em 1.4285714285714286em 2.857142857142857em;
-    background: #262626;
+    width: 16.785714285714285em;
+    padding: 3.6842105263157894em 1.0526315789473684em 2.1052631578947367em 2.8947368421052633em;
+    background: #060606;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-size: 1.3571428571428572em;
     color: #a5a5a5;
   }
   .main-menu ul li {
@@ -327,13 +360,25 @@ a {
   }
   .open-touch-menu .main-wrap {
     position: fixed;
-    margin-left: -12.857142857142858em;
+    margin-left: -16.785714285714285em;
   }
   .open-touch-menu .touch-menu-control {
     transform: rotate(90deg);
   }
 }
 /**** end Ipad ****/
+@media only screen and (max-width: 760px) {
+  .header__contacts {
+    padding-top: 0.7142857142857143em;
+  }
+  .header__contacts .city {
+    margin-bottom: 0.21428571428571427em;
+  }
+  .header__contacts .city,
+  .header__contacts .tel {
+    display: block;
+  }
+}
 /*** Iphone ***/
 @media only screen and (max-width: 480px) {
   .header__logo {
@@ -341,6 +386,10 @@ a {
   }
   .header__contacts {
     display: none;
+  }
+  .main-menu {
+    font-size: 14px;
+    padding: 2.142857142857143em 1.4285714285714286em 2.857142857142857em 2.857142857142857em;
   }
 }
 /*** end Iphone ***/
