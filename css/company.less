@@ -1,0 +1,61 @@
+@import 'lib/mixins';
+@import 'project_style';
+/* company page styles */
+
+
+//layout styles:
+.company-page{
+
+  .wrap{
+    .clearfix;
+  }
+}
+
+.company__picture-part, .company__text-part{
+  width: 50%;
+  .border-box;
+}
+
+.company__picture-part{
+  float:right;
+}
+
+.company__text-part{
+  float:left;
+  padding-right: 6%;
+}
+
+//end layout styles
+
+//fotorama:
+.fotorama__dot{
+  border-color:@black;
+}
+//end fotorama
+
+
+/********** main page media **********/
+
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  .company__picture-part, .company__text-part{
+    width: 100%;
+  }
+  .company__text-part{
+    padding-right: 2%;
+  }
+}
+/**** end Ipad ****/
+
+
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+
+}
+/*** end Iphone ***/
+
+
+/********** end main page media **********/
+
+
+/* end company page styles */

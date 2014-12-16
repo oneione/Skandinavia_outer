@@ -114,6 +114,14 @@ body {
   .main-wrap {
     position: relative;
   }
+  .page-content {
+    margin-top: 2.142857142857143em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-content {
+    margin-top: 0;
+  }
 }
 h1,
 h2,
@@ -131,6 +139,14 @@ a {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
+.text-page {
+  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1.1;
+}
+.text-page p {
+  margin-bottom: 1.25em;
+}
 /* end base project styles */
 /* main page styles */
 .main-page__content {
@@ -143,6 +159,9 @@ a {
 }
 .main-page__content > * {
   word-spacing: normal;
+}
+.main-page__content .footer {
+  position: static;
 }
 .object {
   position: relative;

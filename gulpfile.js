@@ -25,7 +25,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('html', function(){
-    gulp.src('./*.html')
+    gulp.src('./layout/*.html')
         .pipe(connect.reload());
 });
 

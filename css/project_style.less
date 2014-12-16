@@ -98,7 +98,9 @@ body{
   margin:0 auto;
   padding: 0 @wrap-padding;
   max-width: @max-width;
+//  position: relative;
 }
+
 
 /*** Iphone ***/
 @media only screen and (max-width: 480px) {
@@ -115,6 +117,14 @@ body{
 @media only screen and (max-width: 1024px) {
   .main-wrap{
     position: relative;
+  }
+  .page-content{
+    margin-top: 30em/@bfz;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-content{
+    margin-top: 0;
   }
 }
 //end layout settings
@@ -134,6 +144,17 @@ a{
   text-decoration: none;
   .transition(color);
 }
+
+//wswg styles:
+.text-page{
+  .helvetica-light(1em,1.1);
+  
+  p{
+    margin-bottom: 15em/12;
+  }
+}
+//end wswg styles
+
 
 //end common blocks
 

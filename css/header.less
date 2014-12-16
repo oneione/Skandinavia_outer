@@ -134,6 +134,21 @@
 
 /************* header media **************/
 
+@media only screen and (min-width: 1024px) {
+  .main-menu__second-level{
+    display: none !important;
+  }
+  .main-menu__first-level{
+    >li{
+      &.active{
+        .main-menu__second-level{
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
 /**** Ipad ****/
 @media only screen and (max-width: 1024px) {
   //bfz @bfz
@@ -152,7 +167,7 @@
     width: 100%;
     margin-top: 0.2em;
     padding: 15em/@bfz 0;
-    background: #fff;
+//    background: #fff;
     white-space: nowrap;
     text-align: left;
     >li{
@@ -245,6 +260,7 @@
   .open-touch-menu{
     overflow-y: scroll;
     .main-wrap{
+      z-index: 2;
       position: fixed;
       margin-left:-@touch-menu-width;
     }

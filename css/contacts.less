@@ -1,0 +1,63 @@
+@import 'lib/mixins';
+@import 'project_style';
+/* contacts page styles */
+
+.contacts-page{
+  .wrap{
+    .clearfix;
+  }
+}
+
+.contacts__wrap{
+  float:left;
+  width: (100% - 2*4%)/3;
+  margin-right: 4%;
+  margin-bottom: 25em/@bfz;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .city{
+    font-weight: bold;
+  }
+}
+
+.contacts__map{
+  margin-top: 8em/@bfz;
+  height: 260em/@bfz;
+}
+
+/********** contacts page media **********/
+
+/**** big screen ****/
+@media only screen and (min-width: 1600px) {
+
+}
+/**** end big screen ****/
+
+/**** Ipad ****/
+@media only screen and (max-width: 1024px) {
+  .contacts__wrap{
+    width: 100%;
+    margin-right: 0;
+  }
+  .contacts__map{
+    height: 320em/@bfz;
+  }
+}
+/**** end Ipad ****/
+
+
+/*** Iphone ***/
+@media only screen and (max-width: 480px) {
+  .contacts__map{
+    height: 260em/@bfz;
+  }
+}
+/*** end Iphone ***/
+
+
+/********** end contacts page media **********/
+
+/* end contacts page styles */

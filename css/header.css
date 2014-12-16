@@ -114,6 +114,14 @@ body {
   .main-wrap {
     position: relative;
   }
+  .page-content {
+    margin-top: 2.142857142857143em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-content {
+    margin-top: 0;
+  }
 }
 h1,
 h2,
@@ -130,6 +138,14 @@ a {
   -ms-transition: color 0.2s ease;
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
+}
+.text-page {
+  font-family: 'helveticaneuecyr-light', 'Arial', sans-serif, serif;
+  font-size: 1em;
+  line-height: 1.1;
+}
+.text-page p {
+  margin-bottom: 1.25em;
 }
 /* end base project styles */
 /* header styles */
@@ -274,6 +290,14 @@ a {
 }
 /*********** end main menu ***********/
 /************* header media **************/
+@media only screen and (min-width: 1024px) {
+  .main-menu__second-level {
+    display: none !important;
+  }
+  .main-menu__first-level > li.active .main-menu__second-level {
+    display: block !important;
+  }
+}
 /**** Ipad ****/
 @media only screen and (max-width: 1024px) {
   .header__top-wrap {
@@ -290,7 +314,6 @@ a {
     width: 100%;
     margin-top: 0.2em;
     padding: 1.0714285714285714em 0;
-    background: #fff;
     white-space: nowrap;
     text-align: left;
   }
@@ -359,6 +382,7 @@ a {
     overflow-y: scroll;
   }
   .open-touch-menu .main-wrap {
+    z-index: 2;
     position: fixed;
     margin-left: -16.785714285714285em;
   }
