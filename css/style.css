@@ -1816,6 +1816,18 @@ a {
   }
 }
 /**** end Ipad ****/
+@media only screen and (max-width: 760px) {
+  .news-item {
+    width: 47%;
+    margin-right: 3%;
+  }
+  .news-item:nth-child(2n+0) {
+    margin-right: 0;
+  }
+  .news-item:nth-child(3n+0) {
+    margin-right: 3%;
+  }
+}
 /*** Iphone ***/
 @media only screen and (max-width: 480px) {
   .news-item {
@@ -1824,6 +1836,9 @@ a {
     margin-bottom: 3.5714285714285716em;
   }
   .news-item:nth-child(2n+0) {
+    margin-right: 0;
+  }
+  .news-item:nth-child(3n+0) {
     margin-right: 0;
   }
 }
