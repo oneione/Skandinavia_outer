@@ -1818,7 +1818,7 @@ a {
 /**** end Ipad ****/
 @media only screen and (max-width: 760px) {
   .news-item {
-    width: 47%;
+    width: 48.5%;
     margin-right: 3%;
   }
   .news-item:nth-child(2n+0) {
