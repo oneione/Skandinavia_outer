@@ -1214,6 +1214,7 @@ body {
   font-size: 14px;
   line-height: normal;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 /**** body media (font-size correction) ****/
 /**** Ipad ****/
