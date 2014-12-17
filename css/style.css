@@ -1205,7 +1205,7 @@ footer,
   font-style: normal;
 }
 html {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body {
   width: 100%;
@@ -1213,6 +1213,7 @@ body {
   font-family: 'Arial';
   font-size: 14px;
   line-height: normal;
+  overflow-x: hidden;
 }
 /**** body media (font-size correction) ****/
 /**** Ipad ****/
