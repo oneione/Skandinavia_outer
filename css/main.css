@@ -240,7 +240,7 @@ a {
 }
 /**** end big screen ****/
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .main-page__content {
     top: 8.214285714285714em;
     word-spacing: -0.29em;

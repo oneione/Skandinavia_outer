@@ -1435,7 +1435,7 @@ a {
   }
 }
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .header__top-wrap {
     height: 4.642857142857143em;
     -moz-box-sizing: border-box;
@@ -1676,7 +1676,7 @@ a {
 }
 /**** end big screen ****/
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .main-page__content {
     top: 8.214285714285714em;
     word-spacing: -0.29em;
@@ -1729,7 +1729,7 @@ a {
 }
 /********** main page media **********/
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .company__picture-part,
   .company__text-part {
     width: 100%;
@@ -1805,7 +1805,7 @@ a {
 }
 /**** end big screen ****/
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .news-item {
     width: 31.333333333333332%;
     margin-right: 3%;
@@ -1864,7 +1864,7 @@ a {
 }
 /**** end big screen ****/
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .contacts__wrap {
     width: 100%;
     margin-right: 0;

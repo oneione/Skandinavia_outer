@@ -299,7 +299,7 @@ a {
   }
 }
 /**** Ipad ****/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .header__top-wrap {
     height: 4.642857142857143em;
     -moz-box-sizing: border-box;
