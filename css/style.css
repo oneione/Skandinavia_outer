@@ -1246,7 +1246,7 @@ body {
   -o-transition: margin-left 0.2s ease;
   transition: margin-left 0.2s ease;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .main-wrap {
     position: relative;
   }
