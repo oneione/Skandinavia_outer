@@ -81,9 +81,7 @@ textarea {
 a {
   color: inherit;
 }
-a:visited {
-  color: inherit;
-}
+/*a:visited { color: inherit; }*/
 a:hover {
   text-decoration: none;
 }
@@ -1516,16 +1514,17 @@ a {
     font-size: 0.8571428571428571em;
     line-height: 2;
   }
-  .open-touch-menu {
-    overflow-y: scroll;
-  }
   .open-touch-menu .main-wrap {
     z-index: 2;
     position: fixed;
+    height: 100%;
     margin-left: -16.785714285714285em;
   }
   .open-touch-menu .touch-menu-control {
     transform: rotate(90deg);
+  }
+  .open-touch-menu .main-menu {
+    overflow-y: scroll;
   }
 }
 /**** end Ipad ****/

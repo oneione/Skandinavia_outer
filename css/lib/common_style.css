@@ -46,7 +46,7 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    ========================================================================== */
 
 a { color: inherit; }
-a:visited { color: inherit; }
+/*a:visited { color: inherit; }*/
 a:hover { text-decoration: none; }
 a:focus { outline: none; }
 
