@@ -1821,11 +1821,11 @@ a {
     width: 48.5%;
     margin-right: 3%;
   }
-  .news-item:nth-child(2n+0) {
-    margin-right: 0;
-  }
   .news-item:nth-child(3n+0) {
     margin-right: 3%;
+  }
+  .news-item:nth-child(2n+0) {
+    margin-right: 0;
   }
 }
 /*** Iphone ***/
